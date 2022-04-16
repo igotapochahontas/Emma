@@ -7,4 +7,4 @@ Type a story into the box and the AI will demonstrate it's "emoji-ional" impact.
 
 Demo found at:
 
-https://igotapochahontas.github.io/Liza/
+https://igotapochahontas.github.io/Emma/
