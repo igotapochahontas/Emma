@@ -8,15 +8,15 @@ var input_box = document.querySelector('txt');
 //  'https://gist.githubusercontent.com/awesammcoder/91e0f6c527bfdc03b8815289ca4af150/raw/6410ce00b7e1ea0dbd28be03b6eaab64252a841d/brain.rive'
 //];
 const brains = [
-  //'brain.rive'
-//'macro.rive'
-  'dumbBrain.rive'
+  'brain.rive'
+'macro.rive'
+  //'dumbBrain.rive'
 ];
 
 
 bot.loadFile(brains).then(botReady).catch(botNotReady);
 
-form.addEventListener('submit', (e) => {
+input_box.addEventListener('submit', (e) => {
   e.preventDefault();
   selfReply(input_box.value);
   input_box.value = '';
@@ -24,12 +24,12 @@ form.addEventListener('submit', (e) => {
 
 function botReply(message){
   message_container.innerHTML += `<div class="bot">${message}</div>`;
-  location.href = '#edge';
+  location.href = '#wordlistP';
 }
 
 function selfReply(message){
   message_container.innerHTML += `<div class="self">${message}</div>`;
-  location.href = '#edge';
+  location.href = '#wordlistP';
   
   bot.reply("local-user", message).then(function(reply) {
     botReply(reply);
