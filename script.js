@@ -1,8 +1,8 @@
 let bot = new RiveScript();
 
-//const message_container = document.querySelector('wordlistP');
+const message_container = document.querySelector('wordlistP');
 //const form = document.querySelector('form');
-const input_box = document.querySelector('txt');
+var input_box = document.querySelector('txt');
 
 //const brains = [
 //  'https://gist.githubusercontent.com/awesammcoder/91e0f6c527bfdc03b8815289ca4af150/raw/6410ce00b7e1ea0dbd28be03b6eaab64252a841d/brain.rive'
