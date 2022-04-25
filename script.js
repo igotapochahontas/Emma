@@ -16,7 +16,7 @@ const brains = [
 
 bot.loadFile(brains).then(botReady).catch(botNotReady);
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('Submit', (e) => {
   e.preventDefault();
   selfReply(input_box.value);
   input_box.value = '';
@@ -24,12 +24,12 @@ form.addEventListener('submit', (e) => {
 
 function botReply(message){
   message_container.innerHTML += `<div class="bot">${message}</div>`;
-  location.href = '#edge';
+  
 }
 
 function selfReply(message){
   message_container.innerHTML += `<div class="self">${message}</div>`;
-  location.href = '#edge';
+  
   
   bot.reply("local-user", message).then(function(reply) {
     botReply(reply);
