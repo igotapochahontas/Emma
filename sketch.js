@@ -21,7 +21,7 @@ function setup() {
   function typing() {
     var textinput = txt.value();
     var words = textinput.split(/\W/);
-    console.log(words);
+    //console.log(words);
     var emote = "🤔"; 
     var scoredwords = [];
     var totalScore = 0;
@@ -89,7 +89,7 @@ else {day = "ok";}
    comp.html('I feel ' + emote);
  //
     var wordlist = select('#wordlistP');
-    wordlist.html(scoredwords);
+    wordlist.html(message);
 
     //console.log(txt.value());
   }
