@@ -15,7 +15,7 @@ function setup() {
   noCanvas();
   //console.log(afinn);
 
-  var txt = select('#chat');
+  var txt = select('#txt');
   txt.input(typing);
 
   function typing() {
