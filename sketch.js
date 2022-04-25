@@ -13,9 +13,9 @@ function preload() {
 
 function setup() {
   noCanvas();
-  console.log(afinn);
+  //console.log(afinn);
 
-  var txt = select('#txt');
+  var txt = select('#chat');
   txt.input(typing);
 
   function typing() {
@@ -29,7 +29,7 @@ function setup() {
       var word = words[i].toLowerCase();
       if (afinn.hasOwnProperty(word)) {
         var score = afinn[word];
-        console.log(word, score);
+        //console.log(word, score);
         totalScore += Number(score);
         scoredwords.push(word + ': ' + score + ' ');
 
