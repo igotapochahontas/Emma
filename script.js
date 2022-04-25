@@ -16,20 +16,18 @@ const brains = [
 
 bot.loadFile(brains).then(botReady).catch(botNotReady);
 
-form.addEventListener('Submit', (e) => {
-  e.preventDefault();
-  selfReply(input_box.value);
-  input_box.value = '';
-});
+
 
 function botReply(message){
-  message_container.innerHTML += `<div class="bot">${message}</div>`;
   
+  var comp = select('#comparativeP');
+   comp.html(message +" "  +emote);
 }
 
 function selfReply(message){
-  message_container.innerHTML += `<div class="self">${message}</div>`;
   
+  var comp = select('#comparativeP');
+   comp.html(message + emote);
   
   bot.reply("local-user", message).then(function(reply) {
     botReply(reply);
@@ -39,7 +37,7 @@ function selfReply(message){
 function botReady(){
   bot.sortReplies().then(sorted).catch(notSorted) ;
 
-  botReply('Hello');
+  botReply('Hello World');
 }
 
 function botNotReady(err){
