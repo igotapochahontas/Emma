@@ -1,6 +1,6 @@
 let bot = new RiveScript();
 
-const message_container = document.querySelector('wordlistP');
+const message_container = document.querySelector('#wordlistP');
 //const form = document.querySelector('form');
 var input_box = document.querySelector('txt');
 
@@ -19,8 +19,8 @@ bot.loadFile(brains).then(botReady).catch(botNotReady);
 function keyPressed() {
   if (keyCode === ENTER) {
     word = message;
-  } else if (keyCode === RIGHT_ARROW) {
-    word = 0;
+  } else if (keyCode === RETURN) {
+    word = message;
   }
 }
 function botReply(message){
