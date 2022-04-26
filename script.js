@@ -8,23 +8,24 @@ var input_box = document.querySelector('txt');
 //  'https://gist.githubusercontent.com/awesammcoder/91e0f6c527bfdc03b8815289ca4af150/raw/6410ce00b7e1ea0dbd28be03b6eaab64252a841d/brain.rive'
 //];
 const brains = [
-  'brain.rive'
-'macro.rive'
+  //'brain.rive'
+//'macro.rive'
   'dumb.rive'
 ];
 
 
 bot.loadFile(brains).then(botReady).catch(botNotReady);
 
-input_box.addEventListener('submit', (e) => {
-  e.preventDefault();
-  selfReply(input_box.value);
-  input_box.value = '';
-});
-
+function keyPressed() {
+  if (keyCode === ENTER) {
+    word = message;
+  } else if (keyCode === RIGHT_ARROW) {
+    word = 0;
+  }
+}
 function botReply(message){
-  message_container.innerHTML += `<div class="bot">${message}</div>`;
-  location.href = '#wordlistP';
+  '#wordlistP = `<div class="bot">${message}</div>`;
+  
 }
 
 function selfReply(message){
