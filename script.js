@@ -10,7 +10,7 @@ var input_box = document.querySelector('txt');
 const brains = [
 //  'brain.rive'
 //'macro.rive'
-//  'dumb.rive'
+  'dumb.rive'
 ];
 
 
