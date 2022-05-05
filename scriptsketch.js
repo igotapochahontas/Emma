@@ -109,10 +109,10 @@ else {day = "ok";}
     var comp = select('#comparativeP');
    comp.html('I feel ' + emote);
  //
-    var reply = select('#output');
-    words(reply);
+    var reply1 = select('#output');
+    reply1.html(txt.value);
 
     //console.log(txt.value());
   }
 }
-}
+
