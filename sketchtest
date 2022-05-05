@@ -4,8 +4,6 @@
 
 // Number Guessing Chatbot
 // Edited Video: https://www.youtube.com/watch?v=zGe1m_bLOFk
-function setup() {
-  noCanvas();
 
   let bot = new RiveScript();
   bot.loadFile('hello.rive', brainReady, brainError);
@@ -31,6 +29,6 @@ function setup() {
   function chat() {
     let input = user_input.value();
     let reply = bot.reply('local-user', input);
-    output.html(reply);
+    output.html = reply;
   }
-}
+
