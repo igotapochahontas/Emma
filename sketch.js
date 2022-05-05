@@ -88,8 +88,8 @@ else {day = "ok";}
     var comp = select('#comparativeP');
    comp.html('I feel ' + emote);
  //
-    var wordlist = select('#wordlistP');
-    wordlist.html(messages);
+    var reply = select('#output');
+    wordlist.html(reply);
 
     //console.log(txt.value());
   }
@@ -99,6 +99,3 @@ else {day = "ok";}
 
 
 
-function draw() {
-
-}
