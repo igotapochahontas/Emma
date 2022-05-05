@@ -8,12 +8,39 @@ var afinn;
 
 function preload() {
   afinn = loadJSON('afinn111.json');
+  let bot = new RiveScript();
+  bot.loadFile('dumb.rive', brainReady, brainError);
+
+  function brainReady() {
+    console.log('Chatbot ready!');
+    bot.sortReplies();
+ //   let num = floor(random(10)) + 1;
+ //   console.log(num);
+    let reply = bot.reply('local-user', 'set ' );
+  }
+
+  function brainError() {
+    console.log('Chatbot error!');
+  }
+
+ 
+  }
+
 }
 
 
 function setup() {
   noCanvas();
-  //console.log(afinn);
+   let button = select('#submit');
+  let user_input = select('#txt');
+  let output = select('#output');
+
+  button.mousePressed(chat);
+
+  function chat() {
+    let input = user_input.value();
+    let reply = bot.reply('local-user', input);
+    output.html = reply;
 
   var txt = select('#txt');
   txt.input(typing);
