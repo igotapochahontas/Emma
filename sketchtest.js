@@ -6,7 +6,7 @@
 // Edited Video: https://www.youtube.com/watch?v=zGe1m_bLOFk
 
   let bot = new RiveScript();
-  bot.loadFile('hello.rive', brainReady, brainError);
+  bot.loadFile('dumb.rive', brainReady, brainError);
 
   function brainReady() {
     console.log('Chatbot ready!');
