@@ -115,3 +115,4 @@ else {day = "ok";}
     //console.log(txt.value());
   }
 }
+}
