@@ -23,7 +23,7 @@ function setup() {
   }
 
   let button = select('#submit');
-  let user_input = select('#user_input');
+  let user_input = select('#txt');
   let output = select('#output');
 
   button.mousePressed(chat);
