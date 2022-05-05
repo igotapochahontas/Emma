@@ -89,7 +89,7 @@ else {day = "ok";}
    comp.html('I feel ' + emote);
  //
     var wordlist = select('#wordlistP');
-    wordlist.html(message);
+    wordlist.html(messages);
 
     //console.log(txt.value());
   }
